@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: #333;
+    color: #FFF;
+}
+
+header h1{
+    padding-top: .5em;
+    text-align: center;
+}
+
+header .nav-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+header a {
+    padding: 1em;
+    text-align: center;
+    color: #FFF;
+    text-decoration: none;
+    transition: all .3s linear;
+}
+
+header a:hover{
+    color: violet;
+}
+
+/*******************************/
+.container-data{
+    display: flex;
+}
+
+/**************MAIN*************/
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 70%;
+    padding: .95em;
+}
+
+main .noticias{
+    padding: 1em;
+    border: .06em solid #777;
+}
+
+main h3{
+    font-size: xx-large;
+    font-weight: bold;
+    color: #333;
+    padding: .5em; 
+}
+
+main .subtitulo-noticias{
+    color: #ff0000;
+    padding: .5em;
+}
+
+main .p-noticias{
+    font-style: italic;
+    padding: .5em;
+}
+
+main table{
+    text-align: center;
+    padding: .5em;
+}
+
+main thead td{
+    font-weight: bold;
+}
+
+main td{
+    padding: .5em;
+}
+
+/*********** ASIDE ***********/
+
+aside{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    background-color: #f4f4f4;
+    width: 30%;
+    padding: 2.5em 1em;
+}
+
+aside h3{
+    font-size: xx-large;
+    font-weight: bold;
+    color: #333;
+}
+
+aside li{
+    list-style: none;
+    margin-top: 1em;
+}
+
+/********* FOOTER ***********/
+
+footer{
+    padding: 1em;
+    background-color: #001f3f;
+    color: #FFF;
+    text-align: center;
+    width: 100%;
+
+    position: absolute;
+    bottom: 0;
+}
