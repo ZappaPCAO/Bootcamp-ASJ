@@ -22,3 +22,16 @@ sumaValores = () => {
 
     console.log(`La suma de los valores es: ${valor1 + valor2}`)
 }
+
+function snacksAComer(){
+    const edad = parseFloat(document.getElementById("edad2").value);
+    const edadMaxima = parseFloat(document.getElementById("edadMaxima").value);
+    const snack = document.getElementById("snack");
+    const snackDiario = parseFloat(document.getElementById("snacksDiarios").value);
+    const precio = parseFloat(document.getElementById("precio").value);
+
+    let restoDeSnacks = (( edadMaxima - edad ) * (snackDiario * 365)); 
+
+    alert(`Necesitarás ${restoDeSnacks} de snacks para que te alcancen hasta los ${edadMaxima} años.`)
+    alert(`Vas a gastar un total de $ ${(restoDeSnacks * precio)}`)
+}

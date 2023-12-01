@@ -78,6 +78,49 @@
                 <img src="img/js.jpg" alt="JavaScript">
             </div>
         </div>
+        <hr class="p-2">
+        <h2 class="h1 text-center"> Ej 4-1 - Snacks a comer por el resto de su vida</h2>
+        <div class="row p-4">
+            <div class="col-6 align-items-center  d-flex">
+                <form>
+                    <div class="row">
+                        <div class="mb-3 col-6">
+                        <label for="exampleInputEmail1" class="form-label">Edad:</label>
+                        <input type="text" class="form-control" id="edad2" placeholder="..." aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">Ingrese su edad.</div>
+                        </div>
+                        <div class="mb-3 col-6">
+                            <label for="exampleInputEmail1" class="form-label">Edad maxima:</label>
+                            <input type="text" class="form-control" id="edadMaxima" placeholder=".." aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">Ingrese su edad maxima.</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="mb-3 col-6">
+                            <label for="exampleInputEmail1" class="form-label">Snack favorito:</label>
+                            <input type="text" class="form-control" id="snack" placeholder="..." aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">Ingrese su snack favorito.</div>
+                        </div>
+                        <div class="mb-3 col-6">
+                            <label for="exampleInputEmail1" class="form-label">Snacks a comer por dia:</label>
+                            <input type="text" class="form-control" id="snacksDiarios" placeholder="..." aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">Ingrese segundo valor a sumar.</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                    <div class="mb-3 col-6">
+                        <label for="exampleInputEmail1" class="form-label">Precio del snack:</label>
+                        <input type="text" class="form-control" id="precio" placeholder="..." aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">Ingrese el precio de su snack favorito.</div>
+                    </div> 
+                    </div>                    
+                    <button type="button" onclick="snacksAComer()" id="id" class="btn btn-primary">Consultar</button>
+                </form>
+            </div>
+            <div class="col-6 align-items-center justify-content-center d-flex">
+                <img src="img/js.jpg" alt="JavaScript">
+            </div>
+        </div>
     </main>
     <script src="js/index.js"></script>
     <script src="http://momentjs.com/downloads/moment.min.js"></script>
