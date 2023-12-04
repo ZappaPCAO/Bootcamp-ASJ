@@ -127,72 +127,109 @@
 
 // main();
 
+// function main(){
+//     let art1 = {nombre: "sopa", precio: 20}, art2 = {nombre: "pizza", precio: 120}, art3 = {nombre: "cafe", precio: 35.5}, art4 = {nombre: "cerveza", precio: 10.50}
+//     let chiste1 = "Copiar y pegar fue programado por programadores para programadores en realidad.", chiste2 = "¿Por qué el programador renunció a su trabajo? Porque no consiguió arreglos (un aumento)."
+//     let band = false, propina = false;
+
+//     let montoAcumulado = 0, opc = 0;
+
+//     opc = parseInt(prompt("Hola, en que lo puedo ayudar? \n1-Pedir carta \n2-Cuentame un chiste \n3-Pedir cuenta \n4-Pagar \n5-Salir "));
+
+//     while (!band){
+        
+//         if(!opc) // Si le dio a cancelar
+//             opc = 5;
+
+//         if(isNaN(opc)){
+//             alert("Debe ingresar un numero.");
+//             continue;
+//         }
+
+//         switch (opc) {
+//             case 1:
+//                 opc = parseInt(prompt(`CARTA - - - - - PRECIO\n1-${art1.nombre+"   "+art1.precio} \n2-${art2.nombre+"   "+art2.precio} \n3-${art3.nombre+"   "+art3.precio} \n4-${art4.nombre+"   "+art4.precio} \n5-Salir`));
+//                 do{
+//                     switch (opc) {
+//                         case 1:
+//                             montoAcumulado += art1.precio;
+//                             break;
+//                         case 2:
+//                             montoAcumulado += art2.precio;                        
+//                             break;
+//                         case 3:
+//                             montoAcumulado += art3.precio;
+//                             break;
+//                         case 4:
+//                             montoAcumulado += art4.precio;
+//                             break;    
+//                         default:
+//                             break;
+//                     }
+//                     if(confirm("desea agregar algo mas?"))
+//                         opc = parseInt(prompt(`CARTA ------------------ PRECIO\n1-${art1.nombre+"   "+art1.precio} \n2-${art2.nombre+"   "+art2.precio} \n3-${art3.nombre+"   "+art3.precio} \n4-${art4.nombre+"   "+art4.precio} \n5-Salir`));    
+//                     else 
+//                         break;
+//                 }while(opc !== 5)
+//             break;
+
+//             case 2:
+//                     alert(`Ahi va el mejor chiste \n${( (Math.floor(Math.random() * 100))%2===0) ? chiste1 : chiste2}`);
+//             break;
+//             case 3:
+//                 propina = confirm("Desea dejar propina?")
+
+//                 alert( (montoAcumulado === 0) ? "Usted no ha pedido nada." : `Su cuenta es: "$"${Math.round((propina) ? montoAcumulado*1.1 : montoAcumulado)}` )
+//             break;
+//             case 4:
+//                 propina = confirm("Desea dejar propina?")
+//                 alert( (montoAcumulado === 0) ? "Usted no debe pagar nada." : `El monto pagado es: "$"${Math.round((propina) ? montoAcumulado*1.1 : montoAcumulado)}` );
+//                 montoAcumulado = 0;
+//             break;
+//             case 5:
+//                 if(montoAcumulado > 0)
+//                     alert(`debe pagar antes de irse. Monto a pagar $${Math.round(montoAcumulado)}`);
+//                 band = true;
+//             break;
+//             default:
+//                 return 0;                
+//         }
+
+//         if(!band)
+//             opc = parseInt(prompt("Lo puedo ayudar en algo mas? \n1-Pedir carta \n2-Cuentame un chiste \n3-Pedir cuenta \n4-Pagar \n5-Salir "));
+//     };
+//     alert("Nos vemos, muchas gracias. Que tenga un lindo dia.");
+// }
+
+
+// ejercicio piramide
+// function main(){
+//     let rango = parseInt(prompt("Ingrese la dimension de la piramide"));
+//     let concatMsg = "", concatMsgInv = "";
+
+//     for (let i = 0; i < rango; i++){
+//         for (let j = 0; j < i; j++) {
+//             concatMsg += '*';           
+//         }
+//         for (let j = rango - i; j > 0; j--) {
+//             concatMsgInv += '*'; 
+//         }
+//         concatMsgInv += '\n';
+//         concatMsg += '\n';
+//     }         
+//     console.log(concatMsg + concatMsgInv);
+// }
+
+
+
+// Ejercicio factorial de un numero.
 function main(){
-    let art1 = {nombre: "sopa", precio: 20}, art2 = {nombre: "pizza", precio: 120}, art3 = {nombre: "cafe", precio: 35.5}, art4 = {nombre: "cerveza", precio: 10.50}
-    let chiste1 = "Copiar y pegar fue programado por programadores para programadores en realidad.", chiste2 = "¿Por qué el programador renunció a su trabajo? Porque no consiguió arreglos (un aumento)."
-    let band = false, proprina = false;
+    let numero = parseInt(prompt("Ingrese un numero a sacar el factorial: ")), result = 1;
 
-    let montoAcumulado = 0, opc = 0;
-
-    opc = parseInt(prompt("Hola, en que lo puedo ayudar? \n1-Pedir carta \n2-Cuentame un chiste \n3-Pedir cuenta \n4-Pagar \n5-Salir "));
-
-    while (!band){   
-
-        if(isNaN(opc)){
-            alert("Debe ingresar un numero.");
-            continue;
-        }
-
-        switch (opc) {
-            case 1:
-                opc = parseInt(prompt(`CARTA - - - - - PRECIO\n1-${art1.nombre+"   "+art1.precio} \n2-${art2.nombre+"   "+art2.precio} \n3-${art3.nombre+"   "+art3.precio} \n4-${art4.nombre+"   "+art4.precio} \n5-Salir`));
-                do{
-                    switch (opc) {
-                        case 1:
-                            montoAcumulado += art1.precio;
-                            break;
-                        case 2:
-                            montoAcumulado += art2.precio;                        
-                            break;
-                        case 3:
-                            montoAcumulado += art3.precio;
-                            break;
-                        case 4:
-                            montoAcumulado += art4.precio;
-                            break;    
-                        default:
-                            break;
-                    }
-                if(confirm("desea agregar algo mas?"))
-                    opc = parseInt(prompt(`CARTA ------------------ PRECIO\n1-${art1.nombre+"   "+art1.precio} \n2-${art2.nombre+"   "+art2.precio} \n3-${art3.nombre+"   "+art3.precio} \n4-${art4.nombre+"   "+art4.precio} \n5-Salir`));    
-                else break;
-                }while(opc !== 5)
-            break;
-
-            case 2:
-                    alert(`Ahi va el mejor chiste \n${( (Math.floor(Math.random() * 100))%2===0) ? chiste1 : chiste2}`);
-            break;
-            case 3:
-                proprina = confirm("Desea dejar propina?")
-
-                alert( (montoAcumulado === 0) ? "Usted no ha pedido nada." : `Su cuenta es: "$"${Math.round((proprina) ? montoAcumulado*1.1 : montoAcumulado)}` )
-            break;
-            case 4:
-                proprina = confirm("Desea dejar propina?")
-                alert( (montoAcumulado === 0) ? "Usted no debe pagar nada." : `El monto pagado es: "$"${Math.round((proprina) ? montoAcumulado*1.1 : montoAcumulado)}` );
-                montoAcumulado = 0;
-            break;
-            case 5:
-                band = true;
-            break;
-            default:
-                return 0;                
-        }
-
-        if(!band)
-            opc = parseInt(prompt("Lo puedo ayudar en algo mas? \n1-Pedir carta \n2-Cuentame un chiste \n3-Pedir cuenta \n4-Pagar \n5-Salir "));
-    };
-    alert("Nos vemos, muchas gracias. Que tenga un lindo dia.");
+    for (let i = 1; i <= numero; i++)
+        result*=i;
+    
+    console.log(`El resultado es: ${result}`);
 }
 
 main()
