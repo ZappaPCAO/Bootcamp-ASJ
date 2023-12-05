@@ -201,19 +201,18 @@
 //     alert("Nos vemos, muchas gracias. Que tenga un lindo dia.");
 // }
 
-
-// ejercicio piramide
+// // ejercicio piramide
 // function main(){
-//     let rango = parseInt(prompt("Ingrese la dimension de la piramide"));
+//     let rango = +prompt("Ingrese la dimension de la piramide");
 //     let concatMsg = "", concatMsgInv = "";
 
 //     for (let i = 0; i < rango; i++){
-//         for (let j = 0; j < i; j++) {
-//             concatMsg += '*';           
-//         }
-//         for (let j = rango - i; j > 0; j--) {
+//         for (let j = 0; j < i; j++) 
+//             concatMsg += '*';              
+        
+//         for (let j = rango - i; j > 0; j--) 
 //             concatMsgInv += '*'; 
-//         }
+        
 //         concatMsgInv += '\n';
 //         concatMsg += '\n';
 //     }         
@@ -222,14 +221,14 @@
 
 
 
-// Ejercicio factorial de un numero.
-function main(){
-    let numero = parseInt(prompt("Ingrese un numero a sacar el factorial: ")), result = 1;
+// // Ejercicio factorial de un numero.
+// function main(){
+//     let numero = parseInt(prompt("Ingrese un numero a sacar el factorial: ")), result = 1;
 
-    for (let i = 1; i <= numero; i++)
-        result*=i;
+//     for (let i = 1; i <= numero; i++)
+//         result*=i;
     
-    console.log(`El resultado es: ${result}`);
-}
+//     console.log(`El resultado es: ${result}`);
+// }
 
 main()
