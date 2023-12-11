@@ -4,7 +4,7 @@ const imgenArt  = document.getElementById("img-art");
 const btnAddCart = document.getElementById("add-cart");
 
 const storedArt = JSON.parse(localStorage.getItem('artLink'))
-
+console.log(storedArt);
 nomrbreArt.innerHTML = storedArt.name;
 precioArt.innerHTML = storedArt.precio;
 imgenArt.src = storedArt.img;
@@ -30,6 +30,15 @@ btnAddCart.addEventListener("click", ()=>{
     localStorage.setItem("cart", JSON.stringify(cart));
 
     cargarCarrito();
+
+    Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Articulo cargado correctamente!",
+        showConfirmButton: false,
+        timer: 1500
+    });
+
 });
 
 const comprar = document.getElementById("btn-comprar");
@@ -49,4 +58,4 @@ comprar.addEventListener("click", () => {
     total[0].innerHTML = `Total: `
 });
 
-
+cargarCarrito();

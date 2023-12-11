@@ -5,7 +5,7 @@ function eliminarCarrito() {
 }
   
 function obtenerPrecioTotal(array) {
-    return array.reduce((total, elemento) => total + parseFloat(elemento.precio), 0);
+    return array.reduce((total, elemento) => total + (parseFloat(elemento.precio)*parseFloat(elemento.cantidad)), 0);
 }
 
 function eliminarDelCarrito(idArt) {
@@ -37,7 +37,7 @@ function cargarCarrito(){
     cartBody.innerHTML = "";
 
     let arts = document.createElement("div");
-    arts.className = "container";
+    arts.className = "container-fluid";
     arts.id = "container-cart"
 
     arts.innerHTML += `
@@ -68,7 +68,7 @@ function cargarCarrito(){
         `;
     }
 
-    cartTotal[0].innerHTML += formatoArg.format(obtenerPrecioTotal(cart));
+    cartTotal[0].innerHTML = `Total: ${formatoArg.format(obtenerPrecioTotal(cart))}`;
 
     cartBody.appendChild(arts);
 
