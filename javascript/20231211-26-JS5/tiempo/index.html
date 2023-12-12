@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Roboto&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Tomi - Laurix</title>
+</head>
+<body cz-shortcut-listen="true">
+    <div class="encabezado">
+        <h1>Weather Channel</h1>
+        <input id="inputCiudad" type="text" placeholder="Ingresá una ciudad">
+        <button type="button" id="getInfo">ENVIAR</button>
+    </div>
+    <div class="container">
+        <ul class="ciudades">
+            <li>
+                <span id="ciudad"></span><br>
+                <span id="temperatura"></span><span id="grados"></span><br>
+                <img id="wicon" src="" alt="Ícono del tiempo"><br>
+                <span id="descripcion"></span><br>
+            </li>
+        </ul>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
