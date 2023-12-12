@@ -1,0 +1,30 @@
+<div class="container border border-black b-2">
+    <div class="row">
+        <div class="col">
+            <h2>{{subtitulo}}</h2>
+        </div>
+    </div>
+    <div class="row border-black b-2">
+        <div class="col-8 text-center">
+            @if (band) {
+                <div class="d-flex">
+                    @for (num of listado; track $index) {
+                      <span class="p-4 h6">
+                        {{num}}                        
+                      </span>
+                    }
+                </div>
+            }
+            <button class="btn btn-primary mb-2 mx-2" (click)="agregarNum()">Agregar</button>
+        </div>
+        <div class="col-4 text-center">
+            <button class="btn btn-danger mt-3" (click)="ocultarListado($event)" >Ocultar listado</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

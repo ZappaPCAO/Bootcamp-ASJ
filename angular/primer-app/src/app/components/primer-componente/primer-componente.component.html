@@ -1,0 +1,10 @@
+<div class="container text-center p-4">
+    <div class="row d-flex flex-column-reverse">               
+            <button id="resta" class="btn btn-danger p-2" (click)="alterarNum($event)"> - </button>
+                <strong class="p-2"> {{num}} </strong>
+            <button id="suma" class="btn btn-success p-2" (click)="alterarNum($event)"> + </button>
+    </div>    
+    <div class="row">
+        <div class="col"><button class="btn btn-info mt-2" (click)="generarAleatorio()">Generar</button></div>
+    </div>
+</div>
