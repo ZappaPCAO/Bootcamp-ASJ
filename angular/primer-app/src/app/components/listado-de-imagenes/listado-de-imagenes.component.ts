@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './listado-de-imagenes.component.css'
 })
 export class ListadoDeImagenesComponent {
-
+  imagenes = ['img1', 'img2', 'img3'];
 }

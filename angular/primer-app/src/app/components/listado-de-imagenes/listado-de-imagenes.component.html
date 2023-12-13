@@ -1,12 +1,8 @@
-<p class="h2">Imagenes</p>
+<p class="h2 text-center">PRUEBA FOR</p>
 <div class="row">
-    <div class="col-4">
-        <img src="../../../assets/img/nombres_graciosos_para_among_us_51175_orig.jpg" alt="1">
-    </div>
-    <div class="col-4">
-        <img src="../../../assets/img/nombres_graciosos_para_among_us_51175_orig.jpg" alt="1">
-    </div>
-    <div class="col-4">
-        <img src="../../../assets/img/nombres_graciosos_para_among_us_51175_orig.jpg" alt="1">
-    </div>
+    @for (imagen of imagenes; track $index) {
+        <div class="col-4">
+            <image-card></image-card>
+        </div>
+    }
 </div>

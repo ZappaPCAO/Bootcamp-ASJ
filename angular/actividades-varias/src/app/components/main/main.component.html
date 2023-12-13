@@ -1,0 +1,43 @@
+<!-- <input type="text" [(ngModel)] = "valor_input">
+
+<h1>valor del input: {{valor_input}} </h1> -->
+<h1 class="h2 text-center mt-4"> Proyecto 1. </h1>
+<main class="container">
+    <hr>
+    <div class="row p-2">
+        <div class="col-6">
+            <div class="form-floating mb-3 mb-md-0">
+                <input class="form-control border-2" [(ngModel)]="inputValue" (keyup.enter)="addArr()" type="text" placeholder="">
+                <label>Agregar tarea:</label>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <p *ngIf="(arrValues.length>0)" class="h4 text-center">Listado de tareas</p>
+            <div class="row text-center " *ngFor="let i of [].constructor(long); let j = index">
+                <div class="col-6">
+                    <ul *ngFor="let value of arrValues.slice(j * 12, j * 12 + 6); let k = index" class="list-group">
+                        <div class="d-flex">
+                            <input class="mx-2" type="radio" name="{{value}}" (click)="changeValue(k)"  [(ngModel)]="inputSeleccionado[k]" id="{{value}}">
+                            <li class="list-group-item" [ngClass]="{'text-decoration-line-through': inputSeleccionado[k]}"> {{value | uppercase}} </li>
+                            <button class="btn">
+                                <i class="fa-solid fa-trash fa-lg" style="color: #d24150;"></i>
+                            </button> 
+                        </div>                      
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <ul *ngFor="let value of arrValues.slice(j * 12 + 6, j * 12 + 12); let k = index" class="list-group">
+                        <div class="d-flex">
+                            <input class="mx-2" type="radio" name="{{value}}" (click)="changeValue(k)"  [(ngModel)]="inputSeleccionado[k]" id="{{value}}">
+                            <li class="list-group-item" [ngClass]="{'text-decoration-line-through': inputSeleccionado[k]}"> {{value | uppercase}} </li>
+                            <button class="btn">
+                                <i class="fa-solid fa-trash fa-lg" style="color: #d24150;"></i>
+                            </button> 
+                        </div>                     
+                    </ul>
+                </div>                               
+            </div>
+        </div>
+    </div>    
+</main>

@@ -1,0 +1,7 @@
+.social-ancor a{
+    text-decoration: none;
+    transition: all .3s linear;
+}
+.social-ancor a:hover{
+    opacity: 80%;
+}
