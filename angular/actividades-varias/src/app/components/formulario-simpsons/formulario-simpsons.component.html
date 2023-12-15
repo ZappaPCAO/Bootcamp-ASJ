@@ -1,0 +1,29 @@
+<div class="row p-2">
+    <div class="col-6">
+        <div class="form-floating mb-3 mb-md-0">
+            <input class="form-control border-2" [(ngModel)]="inputPersonaje" type="text" placeholder="">
+            <label>Personaje:</label>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="form-floating mb-3 mb-md-0">
+            <input class="form-control border-2" [(ngModel)]="inputProfesion" type="text" placeholder="">
+            <label>Profesion:</label>
+        </div>
+    </div>
+</div>
+<div class="row p-2">
+    <div class="col">
+        <div class="form-floating mb-3 mb-md-0">
+            <input class="form-control border-2" [(ngModel)]="inputFoto" type="url" placeholder="">
+            <label>Foto:</label>
+        </div>
+    </div>
+</div>
+<div class="row p-2">
+    <div class="col">
+        <button class="btn btn-primary" (click)="agregarPersonaje()">
+            Cargar Personaje
+        </button>
+    </div>
+</div>

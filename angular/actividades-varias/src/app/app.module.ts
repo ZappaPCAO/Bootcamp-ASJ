@@ -9,7 +9,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MainComponent } from './components/main/main.component';
 import { AsideComponent } from './components/aside/aside.component';
-
+import { ListadoSimsonsComponent } from './components/listado-simsons/listado-simsons.component';
+import { FormularioSimpsonsComponent } from './components/formulario-simpsons/formulario-simpsons.component';
+import { ProyectoUnoComponent } from './components/proyecto-uno/proyecto-uno.component';
+import { ProyectoDosComponent } from './components/proyecto-dos/proyecto-dos.component';
+import { InicioComponent } from './components/inicio/inicio.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,12 @@ import { AsideComponent } from './components/aside/aside.component';
     HeaderComponent,
     FooterComponent,
     MainComponent,
-    AsideComponent
+    AsideComponent,
+    ListadoSimsonsComponent,
+    FormularioSimpsonsComponent,
+    ProyectoUnoComponent,
+    ProyectoDosComponent,
+    InicioComponent,
   ],
   imports: [
     BrowserModule,

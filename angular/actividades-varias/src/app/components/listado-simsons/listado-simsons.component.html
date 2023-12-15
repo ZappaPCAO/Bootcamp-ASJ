@@ -1,0 +1,14 @@
+<div class="row" style="max-height: 31rem; overflow-y: auto;">
+    <div class="row">
+            <div *ngFor="let personaje of personajes" class="col-md-4 text-center p-2">
+                <div class="card ms-4" (click)="mostrar()" style="width: 95%;">
+                    <img src="{{personaje.foto}}" class="card-img-top" alt="{{personaje.foto | uppercase}}">
+                    <div class="card-body">
+                        <strong>Nombre: </strong><p class="card-text h5">{{personaje.nombre | uppercase}}</p>
+                        <strong>Profesion: </strong><p class="card-text h5">{{personaje.profesion  | uppercase}}</p>
+                    </div>
+                </div>          
+            </div>            
+        <hr>    
+    </div>
+</div>

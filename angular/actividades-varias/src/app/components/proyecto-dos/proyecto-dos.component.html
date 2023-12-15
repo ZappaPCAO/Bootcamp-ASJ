@@ -1,0 +1,13 @@
+<h1 class="h2 text-center mt-4"> Proyecto 2. </h1>
+<main class="my-4">
+    <div class="container">
+        <div class="row justify-content-between align-content-center">
+            <div class="col-6">
+                <formulario-simpsons (personajesEnviar)="manejarPersonajes($event)"></formulario-simpsons>
+            </div>
+            <div class="col-6">
+                <listado-simsons [personajes]="personajes"></listado-simsons>
+            </div>
+        </div>
+    </div>
+</main>
