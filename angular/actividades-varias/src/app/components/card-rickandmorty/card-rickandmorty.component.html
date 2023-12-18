@@ -1,0 +1,15 @@
+<div class="container mt-5">
+    <div class="row justify-content-center align-content-center">
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="{{this.pj.image}}" class="card-img-top" alt="Imagen">
+            <div class="card-body">
+              <h5 class="card-title">{{this.pj.name}}</h5>
+              <p class="card-text"><strong>Genero: </strong>{{ pj.gender }}</p>
+              <p class="card-text"><strong> Especie: </strong> {{ pj.species }} </p>
+              <p class="card-text"><strong>Creacion: </strong> {{ pj.created | date }}</p>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>

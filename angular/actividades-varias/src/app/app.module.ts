@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms'
+import { HttpClientModule } from '@angular/common/http';
 
+// COMPONENTS
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -14,6 +16,12 @@ import { FormularioSimpsonsComponent } from './components/formulario-simpsons/fo
 import { ProyectoUnoComponent } from './components/proyecto-uno/proyecto-uno.component';
 import { ProyectoDosComponent } from './components/proyecto-dos/proyecto-dos.component';
 import { InicioComponent } from './components/inicio/inicio.component';
+import { ProyectoTresComponent } from './components/proyecto-tres/proyecto-tres.component';
+
+// SERVICES
+import { RickandmortyServiceService } from './services/rickandmorty-service.service';
+import { CardRickandmortyComponent } from './components/card-rickandmorty/card-rickandmorty.component';
+
 
 @NgModule({
   declarations: [
@@ -27,14 +35,17 @@ import { InicioComponent } from './components/inicio/inicio.component';
     ProyectoUnoComponent,
     ProyectoDosComponent,
     InicioComponent,
+    ProyectoTresComponent,
+    CardRickandmortyComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [RickandmortyServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

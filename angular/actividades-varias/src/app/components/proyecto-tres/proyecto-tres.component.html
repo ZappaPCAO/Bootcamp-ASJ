@@ -1,0 +1,38 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col">
+            <table>
+                <thead>
+                    <tr>
+                        <td> <strong>Visual</strong></td>
+                        <td><strong>Nombre</strong></td>
+                        <td><strong>Especie</strong></td>
+                        <td><strong>Genero</strong></td>
+                        <td><strong>Creacion</strong></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (pj of arrPj.results; track $index) {                    
+                        <tr (click)="editPj(pj.id)">
+                            <td>
+                                <img src="{{ pj.image }}" alt="Imagen" class="img-fluid" style="max-width: 100px;">
+                            </td>
+                            <td>
+                                <p>{{ pj.name | uppercase }}</p>
+                            </td>
+                            <td>
+                                <p>{{ pj.species | uppercase }}</p>
+                            </td>
+                            <td>
+                                <p>{{ pj.gender | uppercase }}</p>
+                            </td>
+                            <td>
+                                <p>{{ pj.created | date }}</p>
+                            </td>
+                        </tr>                                       
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
