@@ -21,6 +21,8 @@ import { ProyectoTresComponent } from './components/proyecto-tres/proyecto-tres.
 // SERVICES
 import { RickandmortyServiceService } from './services/rickandmorty-service.service';
 import { CardRickandmortyComponent } from './components/card-rickandmorty/card-rickandmorty.component';
+import { ArrPrimosPipe } from './pipes/arr-primos.pipe';
+import { PipesTestComponent } from './components/pipes-test/pipes-test.component';
 
 
 @NgModule({
@@ -37,6 +39,8 @@ import { CardRickandmortyComponent } from './components/card-rickandmorty/card-r
     InicioComponent,
     ProyectoTresComponent,
     CardRickandmortyComponent,
+    ArrPrimosPipe,
+    PipesTestComponent,
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,7 @@ import { ProyectoDosComponent } from './components/proyecto-dos/proyecto-dos.com
 import { InicioComponent }  from './components/inicio/inicio.component';
 import { ProyectoTresComponent } from './components/proyecto-tres/proyecto-tres.component';
 import { CardRickandmortyComponent } from './components/card-rickandmorty/card-rickandmorty.component';
+import { PipesTestComponent } from './components/pipes-test/pipes-test.component';
 
 const routes: Routes = [
   {path: `proyecto-uno`, component:ProyectoUnoComponent},
@@ -17,7 +18,7 @@ const routes: Routes = [
   ]
   },
   {path: `inicio`, component: InicioComponent},
-  {path: ``, component: InicioComponent},
+  {path: ``, component: PipesTestComponent},
   {path: `**`, component: InicioComponent},
 ];
 
