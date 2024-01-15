@@ -1,0 +1,37 @@
+public class MyClass {
+
+	public static void main(String[] args) {
+
+		System.out.println("Hola mundo");
+		
+		// Syso con ctrl + barra = System.out.println();
+		System.out.println();
+		
+		// Tipos de caracter 
+		int edad = 0;
+		char letra;
+		double num;
+		boolean algo;
+		String asd; // Es una clase
+		float das;
+		
+		edad = 25;
+		letra = 'C';
+		num = 124.3;
+		algo = false;
+		asd = "hola perros";
+		das = 99.9f;
+		
+		System.out.println(edad);
+		System.out.println(letra);
+		System.out.println(num);
+		System.out.println(algo);
+		System.out.println(asd);
+		System.out.println(das);
+		
+		// Rappers -> tipos pero con mayuscula. String, Integer, Boolean, etc
+		
+		
+		
+	}
+}

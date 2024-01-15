@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class MyClass {
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+		
+		int num1, num2, num3; 
+		
+		
+		System.out.println("Ingresa un numero: ");
+		num1 = scanner.nextInt();
+		System.out.println("Ingresa otro: ");
+		num2 = scanner.nextInt();
+		System.out.println("Ingresa otro: ");
+		num3 = scanner.nextInt();
+		
+		scanner.close();
+
+		
+		System.out.println("Numero 1: " + num1);
+		System.out.println("Numero 2: " + num2);
+		System.out.println("Numero 3: " + num3);
+	}
+}

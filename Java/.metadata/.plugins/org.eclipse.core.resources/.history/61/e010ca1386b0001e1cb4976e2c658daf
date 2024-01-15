@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class MyClass {
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Ingresa una palabra: ");
+		String myString = scanner.next();
+		System.out.println("Ingresa un numero: ");
+		int myInt = scanner.nextInt();
+		scanner.close();
+
+		System.out.println("myString is: " + myString);
+		System.out.println("myInt is: " + myInt);
+	}
+}

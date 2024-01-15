@@ -1,0 +1,11 @@
+public class MyClass {
+
+	public static void main(String[] args) {
+
+		System.out.println("Hola");
+		
+		// Syso con ctrl + barra = System.out.println();
+		System.out.println();
+	}
+
+}
