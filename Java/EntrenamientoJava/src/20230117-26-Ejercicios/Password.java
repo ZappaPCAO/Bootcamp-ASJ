@@ -38,26 +38,24 @@ public class Password {
 		this.contrasenia = this.generarContrasenia();
 	}
 	public Password(Integer longitud) {
-		this.longitud = longitud;
+		this.longitud = longitud;		
 		this.contrasenia = this.generarContrasenia();
 	}
 	public Password(Integer longitud, String contrasenia) {
 		this.longitud = longitud;
-		this.contrasenia = contrasenia;
+		
+		if(contrasenia.length() == longitud) {
+			this.contrasenia = contrasenia;
+		}else {
+			System.out.println("La contrasenia no conincide con el rango, \nse te generara una aleatoria con la dimension brindada.\n\nPodra cambiarla mas adelante(?)");
+			this.contrasenia = this.generarContrasenia();
+		}		
 	}
 	
-	public Integer getLongitud() {
-		return longitud;
-	}
-	public void setLongitud(Integer longitud) {
-		this.longitud = longitud;
-	}
-	public String getContrasenia() {
-		return contrasenia;
-	}
-	public void setContrasenia(String contrasenia) {
-		this.contrasenia = contrasenia;
-	}
+	public Integer getLongitud() {return longitud;}
+	public void setLongitud(Integer longitud) {this.longitud = longitud;}
+	public String getContrasenia() {return contrasenia;}
+	public void setContrasenia(String contrasenia) {this.contrasenia = contrasenia;}
 	
 	@Override
 	public String toString() {
@@ -104,15 +102,9 @@ public class Password {
 					break;
 				default:
 					break;
-			}			
-			
+			}						
 			contrasenia += caracter;
-		}
-		
-		return contrasenia;
-		
+		}		
+		return contrasenia;		
 	}
-	
-	
-
 }

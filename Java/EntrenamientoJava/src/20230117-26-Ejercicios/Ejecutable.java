@@ -31,6 +31,4 @@ public class Ejecutable {
 	public String toString() {
 		return "Ejecutable [contrasenia=" + this.contrasenia + ", esFuerte=" + this.esFuerte + "]";
 	}
-	
-	
 }
