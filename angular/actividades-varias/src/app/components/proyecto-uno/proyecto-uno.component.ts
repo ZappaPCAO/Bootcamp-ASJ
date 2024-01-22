@@ -1,41 +1,66 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ToDolistService } from '../../services/to-dolist.service';
+import { Tarea } from '../../models/tarea';
 
 @Component({
   selector: 'app-proyecto-uno',
   templateUrl: './proyecto-uno.component.html',
   styleUrl: './proyecto-uno.component.css'
 })
-export class ProyectoUnoComponent {
+export class ProyectoUnoComponent implements OnInit {
   tareas: Tarea[] = [];
   inputValue = ``;
   long: number = 0;
 
+  constructor(private toDoListService: ToDolistService){}
+
   deleteElem(value: Tarea){
-    const index =  this.tareas.findIndex((tarea) => tarea.id === value.id);
-    this.tareas.splice(index, 1);
-  }
-  
-  changeValue(value: Tarea){
-    const index =  this.tareas.findIndex((tarea) => tarea.id === value.id);
-    this.tareas[index].cond = !(this.tareas[index].cond);
+    this.toDoListService.delete(value.id).subscribe( data => {
+      if(data){
+        const tareaIndex = this.tareas.findIndex((tarea: any) => tarea.id === value.id);
+
+        if (tareaIndex !== -1) {
+          // Utiliza slice para crear una nueva copia del array sin el elemento encontrado
+          this.tareas = this.tareas.slice(0, tareaIndex).concat(this.tareas.slice(tareaIndex + 1));
+        }        
+      }
+      this.long = Math.ceil(this.tareas.length / 12);
+    })
   }
 
   addArr(){
-    console.log(this.tareas);
-    this.tareas.push(new Tarea(this.inputValue, (this.tareas.length > 0) ? this.tareas[this.tareas.length - 1].id : 0));
-    this.inputValue = ``;
-    this.long = Math.ceil(this.tareas.length / 12);
-  }
-}
+    let tarea = {
+      id: 0,
+      nombre: this.inputValue,
+      descripcion: "",
+      estado: true
+    }
 
-class Tarea {
-  constructor(value:string, id:number){
-    this.value = value;
-    this.cond = false;
-    this.id = id + 1;
+    this.toDoListService.post(tarea).subscribe( data => {
+      console.log(data);
+      this.tareas.push(data);
+      this.long = Math.ceil(this.tareas.length / 12);
+    })
+
+    this.inputValue = "";
   }
 
-  id: number;
-  value: string;
-  cond: boolean;
+  updateElem(value: Tarea) {
+    console.log("prueba: " + value.nombre)
+
+    this.toDoListService.put(value).subscribe( data => {
+      const tareaIndex = this.tareas.findIndex((tarea: any) => tarea.id === value.id);
+      this.tareas[tareaIndex] = data;
+    })
+
+  }
+
+  ngOnInit(): void {
+    console.log("Prueba: ");
+    this.toDoListService.get().subscribe( data =>{
+      this.tareas = data;
+      console.log(data); 
+      this.long = Math.ceil(this.tareas.length / 12);
+      });
+  }
 }

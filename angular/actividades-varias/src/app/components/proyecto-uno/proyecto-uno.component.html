@@ -14,23 +14,29 @@
             <div class="row text-center " *ngFor="let i of [].constructor(long); let j = index">
                 <div class="col-6">
                     <ul *ngFor="let value of tareas.slice(j * 12, j * 12 + 6); let k = index" class="list-group">
-                        <div class="d-flex">
-                            <input class="mx-2" type="checkbox" name="task" (change)="changeValue(value)"  [(ngModel)]="value.cond" id="tarea-{{value.id}}">
-                            <li class="list-group-item" [ngClass]="{'text-decoration-line-through': value.cond}"> {{value.value| uppercase}} </li>
+                        <div class="d-flex align-items-center">
+                            <input class="mx-2" type="checkbox" name="task" [(ngModel)]="value.estado" id="tarea-{{value.id}}">
+                            <input style="display: inline-block;" class="form-control" [ngClass]="{'text-decoration-line-through': !value.estado}" [(ngModel)]="value.nombre">
                             <button class="btn" (click)="deleteElem(value)">
-                                <i class="fa-solid fa-trash fa-lg" style="color: #d24150;"></i>
-                            </button> 
-                        </div>                      
+                              <i class="fa-solid fa-trash fa-lg" style="color: #d24150;" title="Eliminar"></i>
+                            </button>
+                            <button class="btn" (click)="updateElem(value)">                             
+                              <i class="fa-solid fa-pen-to-square" style="color: #00fb4f;" title="Editar"></i>
+                            </button>
+                        </div>                                               
                     </ul>
                 </div>
                 <div class="col-6">
                     <ul *ngFor="let value of tareas.slice(j * 12 + 6, j * 12 + 12); let k = index" class="list-group">
-                        <div class="d-flex">
-                            <input class="mx-2" type="checkbox" name="task" (change)="changeValue(value)"  [(ngModel)]="value.cond" id="tarea-{{value.id}}">
-                            <li class="list-group-item" [ngClass]="{'text-decoration-line-through': value.cond}"> {{value.value| uppercase}} </li>
+                        <div class="d-flex align-items-center">
+                            <input class="mx-2" type="checkbox" name="task" [(ngModel)]="value.estado" id="tarea-{{value.id}}">
+                            <input style="display: inline-block;" class="form-control" [ngClass]="{'text-decoration-line-through': !value.estado}" [(ngModel)]="value.nombre">
                             <button class="btn" (click)="deleteElem(value)">
-                                <i class="fa-solid fa-trash fa-lg" style="color: #d24150;"></i>
-                            </button> 
+                                <i class="fa-solid fa-trash fa-lg" style="color: #d24150;" title="Eliminar"></i>
+                            </button>
+                            <button class="btn" (click)="updateElem(value)">
+                                <i class="fa-solid fa-pen-to-square" style="color: #00fb4f;" title="Editar"></i>
+                            </button>
                         </div>                     
                     </ul>
                 </div>                               
