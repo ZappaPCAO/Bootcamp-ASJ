@@ -9,13 +9,15 @@ import { NewVideoComponent } from './components/new-video/new-video.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ListVideosComponent } from './components/list-videos/list-videos.component';
 import { ViewVideoComponent } from './components/view-video/view-video.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     NewVideoComponent,
     ListVideosComponent,
-    ViewVideoComponent
+    ViewVideoComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

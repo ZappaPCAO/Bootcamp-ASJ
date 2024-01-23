@@ -24,7 +24,7 @@ export class VideoService {
   }
 
   update(video: Video) : Observable<Video>{
-    return this.http.put<Video>(this.url + `/${video.id}`, video);
+    return this.http.put<Video>(this.url, video);
   }
 
   delete(id: number) : Observable<boolean> { 
